@@ -1,7 +1,7 @@
 A B Compiler
 ============
 
-abc is a compiler for the [B Programming Language](http://en.wikipedia.org/wiki/B_(programming_language\)) that targets x86\_32 processors. It is currently tested under Linux but should work (or at least be easily ported) to other UNIX-like systems. The code is based on [an early C compiler (last1120c)](http://www.cs.bell-labs.com/who/dmr/primevalC.html) by Dennis Ritchie.
+abc is a compiler for the [B Programming Language](http://en.wikipedia.org/wiki/B_(programming_language)) that targets x86\_32 processors. It is currently tested under Linux but should work (or at least be easily ported) to other UNIX-like systems. The code is based on [an early C compiler (last1120c)](http://www.cs.bell-labs.com/who/dmr/primevalC.html) by Dennis Ritchie.
 
 Documentation
 -------------
