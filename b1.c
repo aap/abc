@@ -285,7 +285,7 @@ rcexpr(struct tnode *tr)
 
 	case NEG:
 		rcexpr(tr->tr1);
-		printf("\tnot\t%%eax\n");
+		printf("\tneg\t%%eax\n");
 		return;
 
 	case QUEST:

@@ -556,7 +556,7 @@ void
 defvec(void)
 {
 	stack -= NCPW;
-	printf("\t%%esp,%%eax\n");
+	printf("\tmov\t%%esp,%%eax\n");
 	printf("\tshr\t$2,%%eax\n");
 	printf("\tpush\t%%eax\n");
 }
@@ -583,6 +583,7 @@ blkhed(void)
 					al -= bs->dim*NCPW;
 					setstk(al);
 					defvec();
+					bs->offset = al;
 				}
 				al -= NCPW;
 			} else if (bs->class == ARG)
