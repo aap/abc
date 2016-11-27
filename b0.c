@@ -934,7 +934,8 @@ advanc:
 	switch (o=symbol()) {
 	case NAME:
 		if (pushsym(symbol()) == LPARN) {	/* function */
-			bsym->class = EXTERN;
+			if (bsym->class == 0)
+				bsym->class = EXTERN;
 		} else if (bsym->class == 0) {
 			error("%s undefined", bsym->name);
 			bsym->class = EXTERN;
@@ -995,7 +996,7 @@ tand:
 				o = STAR;
 		goto oponst;
 
-	case LPARN:
+		case LPARN:
 		if (andflg) {
 			o = symbol();
 			if (o == RPARN)
