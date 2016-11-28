@@ -724,6 +724,8 @@ stmt:
 		case GOTO:
 			if ((o = symbol()) != NAME)
 				goto syntax;
+			if(bsym->offset == 0)
+				bsym->offset = isn++;
 			jump(bsym->offset);
 			goto semi;
 
@@ -822,7 +824,8 @@ stmt:
 				goto stmt;
 			}
 			bsym->class = INTERN;
-			bsym->offset = isn++;
+			if (bsym->offset == 0)
+				bsym->offset = isn++;
 			label(bsym->offset);
 			goto stmt;
 		}
