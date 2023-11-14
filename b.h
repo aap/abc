@@ -38,26 +38,8 @@ struct	swtab {
 	int	swval;
 };
 
-struct	hshtab hshtab[HSHSIZ];
-int	hshused;
-int	eof;
-int	peekc;
-char	ctab[128];
-struct	hshtab *bsym;
-struct	hshtab *paraml, *parame;
-int	cval;
-int	isn;
-char	symbuf[NCPS+1];
-FILE	*sbufp;
-int	stack;
-struct	tnode **cp;
-int	*space;
-int	ospace[OSSIZ];
-int	retlab;
-int	nerror;
-struct	swtab swtab[SWSIZ];
-struct	swtab *swp;
-int	deflab;
+extern int  isn;
+
 extern int	contlab;
 extern int	brklab;
 

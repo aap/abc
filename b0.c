@@ -1,5 +1,26 @@
 #include "b.h"
 
+int	hshused;
+int	eof;
+int	peekc;
+struct	hshtab hshtab[HSHSIZ];
+char	ctab[128];
+struct	hshtab *bsym;
+struct	hshtab *paraml, *parame;
+int	cval;
+int	isn;
+char	symbuf[NCPS+1];
+FILE	*sbufp;
+int	stack;
+struct	tnode **cp;
+int	*space;
+int	ospace[OSSIZ];
+int	retlab;
+int	nerror;
+struct	swtab swtab[SWSIZ];
+struct	swtab *swp;
+int	deflab;
+
 void extdef(void);
 struct hshtab * lookup(void);
 void blkhed(void);
